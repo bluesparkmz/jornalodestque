@@ -1,0 +1,437 @@
+.dash-editor-only {
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+  background: #f0f0f1;
+}
+
+form.gutenberg,
+.gutenberg {
+  width: 100% !important;
+  max-width: none !important;
+  min-height: 100vh;
+  background: #f0f0f1;
+  display: flex !important;
+  flex-direction: column;
+  gap: 0 !important;
+}
+
+.gutenberg-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 60px;
+  padding: 0 20px;
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+.gutenberg-topbar__left,
+.gutenberg-topbar__right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.gutenberg-back {
+  font-size: 13px;
+  color: #1e1e1e;
+  font-weight: 600;
+}
+
+.gutenberg-doc-title {
+  color: #757575;
+  font-size: 13px;
+  background: #f0f0f1;
+  padding: 6px 12px;
+  border-radius: 2px;
+  max-width: min(360px, 40vw);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.gutenberg-btn {
+  height: 36px;
+  padding: 0 14px;
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #1e1e1e;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+.gutenberg-btn:hover { border-color: #999; color: #1e1e1e; }
+
+.gutenberg-btn.is-primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff !important;
+}
+
+.gutenberg-btn.is-primary:hover {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+.gutenberg-btn:disabled { opacity: .6; cursor: wait; }
+
+.gutenberg-flash {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.gutenberg-flash.is-ok { color: #176b38; }
+.gutenberg-flash.is-err { color: #b32424; }
+
+.gutenberg-body {
+  display: flex;
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  align-items: stretch;
+}
+
+.gutenberg-canvas {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 72px 48px 120px;
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+}
+
+.gutenberg-canvas-inner {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.gutenberg-title {
+  width: 100%;
+  border: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 2.6rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #1e1e1e;
+  padding: 0;
+  margin: 0 0 8px;
+  height: auto;
+}
+
+.gutenberg-title::placeholder { color: #c3c4c7; font-weight: 400; }
+
+.gutenberg-sidebar {
+  flex: 0 0 320px;
+  width: 320px;
+  background: #fff;
+  border-left: 1px solid #e0e0e0;
+  overflow: auto;
+  position: sticky;
+  top: 60px;
+  height: calc(100vh - 60px);
+  box-sizing: border-box;
+}
+
+.gutenberg-tabs {
+  display: flex;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.gutenberg-tabs span {
+  flex: 1;
+  text-align: center;
+  padding: 12px 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #757575;
+  border-bottom: 3px solid transparent;
+}
+
+.gutenberg-tabs span.is-active {
+  color: #1e1e1e;
+  border-bottom-color: var(--primary);
+}
+
+.gutenberg-panel {
+  padding: 20px 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.gutenberg-panel h3 {
+  margin: 0 0 16px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1e1e1e;
+}
+
+.gutenberg-field { margin-bottom: 20px; }
+.gutenberg-field:last-child { margin-bottom: 0; }
+
+.gutenberg-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: #1e1e1e;
+  margin-bottom: 8px;
+}
+
+.gutenberg-cover-btn {
+  width: 100%;
+  min-height: 100px;
+  border: 1px dashed #c3c4c7;
+  background: #f6f7f7;
+  color: #1e1e1e;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.gutenberg-cover-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: #fff;
+}
+
+.gutenberg-cover img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 2px;
+}
+
+.gutenberg-cover__actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.gutenberg-textarea {
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 10px 12px;
+  min-height: 96px;
+  resize: vertical;
+  font: inherit;
+  background: #fff;
+  border-radius: 2px;
+}
+
+.gutenberg-textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.gutenberg-meta {
+  display: grid;
+  gap: 12px;
+  font-size: 13px;
+}
+
+.gutenberg-meta > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.gutenberg-meta span { color: #757575; }
+.gutenberg-meta strong { font-weight: 600; color: #1e1e1e; }
+.gutenberg-meta select {
+  border: 1px solid #ddd;
+  padding: 5px 8px;
+  font: inherit;
+  background: #fff;
+  border-radius: 2px;
+}
+
+.gutenberg-search input {
+  width: 100%;
+  height: 38px;
+  border: 1px solid #ddd;
+  padding: 0 12px;
+  margin-bottom: 12px;
+  font: inherit;
+  border-radius: 2px;
+}
+
+.gutenberg-search input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.gutenberg-cats {
+  display: grid;
+  gap: 0;
+  max-height: min(340px, 42vh);
+  overflow: auto;
+  border: 1px solid #eee;
+  border-radius: 2px;
+}
+
+.gutenberg-cat {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  font-weight: 500;
+  font-size: 13px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f1;
+  margin: 0;
+}
+
+.gutenberg-cat:last-child { border-bottom: 0; }
+.gutenberg-cat:hover { background: #f6f7f7; }
+
+.gutenberg-cat input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--primary);
+}
+
+/* Clean editor: no permanent toolbar clutter */
+.visual-editor.is-clean {
+  border: 0;
+  background: transparent;
+  position: relative;
+}
+
+.visual-editor.is-clean .toolbar.is-clean {
+  display: none;
+}
+
+.visual-editor.is-clean .inserter {
+  position: absolute;
+  left: -44px;
+  top: 4px;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  background: #1e1e1e;
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  border-radius: 2px;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transition: opacity .15s ease;
+  z-index: 5;
+}
+
+.visual-editor.is-clean:hover .inserter,
+.visual-editor.is-clean:focus-within .inserter,
+.visual-editor.is-clean .inserter.is-open {
+  opacity: 1;
+}
+
+.visual-editor.is-clean .inserter-menu {
+  position: absolute;
+  left: -44px;
+  top: 42px;
+  width: 200px;
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 8px 24px rgba(0,0,0,.12);
+  padding: 6px;
+  z-index: 6;
+  display: grid;
+  gap: 2px;
+}
+
+.visual-editor.is-clean .inserter-menu button {
+  border: 0;
+  background: transparent;
+  text-align: left;
+  padding: 8px 10px;
+  font-size: 13px;
+  cursor: pointer;
+  color: #1e1e1e;
+}
+
+.visual-editor.is-clean .inserter-menu button:hover {
+  background: #f0f0f1;
+}
+
+.visual-editor.is-clean .bubble-menu {
+  position: sticky;
+  top: 72px;
+  z-index: 8;
+  width: fit-content;
+  margin: 0 0 12px;
+  border-radius: 2px;
+}
+
+.visual-editor.is-clean .visual-editor-content.is-clean {
+  min-height: 55vh;
+  padding: 0;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #1e1e1e;
+}
+
+.visual-editor.is-clean .visual-editor-content.is-clean p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  float: left;
+  color: #c3c4c7;
+  pointer-events: none;
+  height: 0;
+  font-size: 1.125rem;
+}
+
+.visual-editor.is-clean .media-actions {
+  border: 0;
+  background: transparent;
+  padding: 8px 0;
+}
+
+@media (max-width: 980px) {
+  .gutenberg-body {
+    flex-direction: column;
+  }
+
+  .gutenberg-sidebar {
+    flex: none;
+    width: 100%;
+    position: static;
+    height: auto;
+    border-left: 0;
+    border-top: 1px solid #e0e0e0;
+  }
+
+  .gutenberg-title { font-size: 2rem; }
+  .gutenberg-canvas { padding: 36px 18px 64px; }
+
+  .visual-editor.is-clean .inserter {
+    left: 0;
+    top: -40px;
+    opacity: 1;
+  }
+
+  .visual-editor.is-clean .inserter-menu {
+    left: 0;
+    top: -4px;
+  }
+}
