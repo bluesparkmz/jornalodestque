@@ -1,6 +1,6 @@
 import axios, { AxiosRequestConfig } from "axios";
 
-export const API_URL = (process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000").replace(/\/$/, "");
+export const API_URL = (process.env.NEXT_PUBLIC_API_URL ?? "https://jornal-o-destaque.bluesparkmz.com").replace(/\/$/, "");
 const client = axios.create({ baseURL: API_URL, timeout: 30_000 });
 export type User = { id: number; username: string; email: string | null; display_name: string | null; role: string; is_active: boolean };
 export type Category = { id: number; name: string; slug: string; description: string | null };
